@@ -9,9 +9,9 @@ public class GroupController:ControllerBase
 {
     
     private GroupService _groupsService; 
-    public GroupController()
+    public GroupController(GroupService groupeService)
     {
-        _groupsService=new GroupService();
+        _groupsService=groupeService;
     }
     [HttpGet("GetGroups")]
     public List<GroupDto>GetGroups(){

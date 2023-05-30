@@ -5,9 +5,9 @@ public class StudentService
     
   private DapperContext _context;
 
-    public StudentService()
+    public StudentService(DapperContext context)
     {
-        _context=new DapperContext();
+        _context=context;
 
     }
 

@@ -9,9 +9,9 @@ public class MentorController:ControllerBase
 {
     
     private MentorService _mentorService; 
-    public MentorController()
+    public MentorController(MentorService mentorService)
     {
-        _mentorService=new MentorService();
+        _mentorService=mentorService;
     }
     [HttpGet("GetMentors")]
     public List<MentorDto>GetMentors(){

@@ -9,9 +9,9 @@ public class CourseController:ControllerBase
 {
     
     private CourseService _courseService; 
-    public CourseController()
+    public CourseController(CourseService courseService)
     {
-        _courseService=new CourseService();
+        _courseService=courseService;
     }
     [HttpGet("GetCourses")]
     public List<CourseDto>GetCourse(){

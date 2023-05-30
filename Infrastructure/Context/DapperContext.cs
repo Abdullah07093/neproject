@@ -1,14 +1,15 @@
 using System.Data;
 using Npgsql;
+using Microsoft.Extensions.Configuration;
 
 public class DapperContext
 {
-string connectionString="Server=localhost;Port=5432;Database=softclub;User Id=postgres;Password=4856;";
-public DapperContext()
+private IConfiguration _configuration;
+public DapperContext( IConfiguration configuration)
 {
-    
+    _configuration=configuration;
 }
 public IDbConnection CreateConnection(){
-    return new NpgsqlConnection(connectionString);
+    return new NpgsqlConnection(_configuration.GetConnectionString("DefaultConnection"));
 }
 }

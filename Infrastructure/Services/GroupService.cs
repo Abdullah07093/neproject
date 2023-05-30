@@ -5,9 +5,9 @@ public class GroupService
     
   private DapperContext _context;
 
-    public GroupService()
+    public GroupService(DapperContext context)
     {
-        _context=new DapperContext();
+        _context=context;
 
     }
 

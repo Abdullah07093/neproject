@@ -9,9 +9,9 @@ public class StudentController:ControllerBase
 {
     
     private StudentService _studentService; 
-    public StudentController()
+    public StudentController(StudentService studentService)
     {
-        _studentService=new StudentService();
+        _studentService=studentService;
     }
     [HttpGet("GetStudents")]
     public List<StudentDto>GetStudents(){

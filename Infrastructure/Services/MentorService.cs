@@ -5,9 +5,9 @@ public class MentorService
     
   private DapperContext _context;
 
-    public MentorService()
+    public MentorService(DapperContext context)
     {
-        _context=new DapperContext();
+        _context=context;
 
     }
 
